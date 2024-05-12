@@ -1,0 +1,15 @@
+{
+  "name": "learn-typescript-in-depth-udemy",
+  "version": "1.0.0",
+  "description": "https://www.udemy.com/course/typescript-course/learn/lecture/33550794#overview",
+  "scripts": {
+    "start": "(npx parcel ./index.html) & npx parcel watch ./index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
