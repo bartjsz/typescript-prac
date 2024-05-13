@@ -25,3 +25,5 @@ tsc -p ./tsconfig.json
 <!-- troubleshooting -->
 
 the main prop and value in package.json may cause issue in parcel delete it.
+
+<!-- cannot redeclare block scoped variables  -->

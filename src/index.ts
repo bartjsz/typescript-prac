@@ -1,27 +1,50 @@
 console.log("start");
+// index signatures
+// https://www.udemy.com/course/typescript-course/learn/lecture/31756478#overview
+type Cat = {
+  name: string;
+  purrs: boolean;
+  color: string;
+};
 
-let bigInt1 = BigInt(945845);
+type Dog = {
+  name: string;
+  barks: boolean;
+  color: string;
+};
 
-let bigInt2 = 12345312n;
-// console.log(bigInt1);
+// intersection
+type HybridAnimal = Dog & Cat;
 
-const safeInt = Number.MAX_SAFE_INTEGER;
+const HybridAnimal: HybridAnimal = {
+  name: "Max",
+  color: "white",
+  barks: true,
+  purrs: false,
+};
 
-console.log(safeInt);
+type Airplane = {
+  flightNumber: string;
+  airplaneModel: string;
+  dateOfDepartures: string;
+  timeOfDeparture: string;
+  from: string;
+  to: string;
+  seats: {
+    // [key: string]: string; // this is an index signatures cannot have multiple index signatures within same object
+    [key: string | keyof HybridAnimal]: string | number; // this is an index signatures // can do unions exampel
+  };
+};
 
-const safeIntPlusOne = safeInt + 1;
-
-const safeIntPlusTwo = safeInt + 2;
-
-console.log(safeIntPlusOne);
-console.log(safeIntPlusTwo);
-
-console.log(safeIntPlusOne === safeIntPlusTwo);
-
-let a: bigint = BigInt(123458);
-let b: bigint = 23456465n;
-
-let c: bigint = a - b;
-
-let e: bigint = 24551.2n; // can not use decmial points in bigints. floats//decimal are numbers
-let f = Math.log(a); // only number types will work with Math object not bigints
+const airPlane: Airplane = {
+  flightNumber: "sg102",
+  airplaneModel: "a380",
+  dateOfDepartures: "01/12/2022",
+  timeOfDeparture: "23:10",
+  from: "JFK",
+  to: "DCA",
+  seats: {
+    "10A": "Mark Thomas",
+    "10B": "John Jacobs",
+  },
+};
