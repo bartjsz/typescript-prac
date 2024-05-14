@@ -25,3 +25,5 @@ let c: bigint = a - b;
 
 let e: bigint = 24551.2n; // can not use decmial points in bigints. floats//decimal are numbers
 let f = Math.log(a); // only number types will work with Math object not bigints
+
+export default {};

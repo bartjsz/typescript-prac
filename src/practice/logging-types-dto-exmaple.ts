@@ -17,3 +17,5 @@ const newDto2: TestDto = Object.assign({}, DefaultTestDto, {
 
 console.log(newDto1); // { "active": -1, "user_name": "Fred" }
 console.log(newDto2); // { "active": -1, "user_name": "Barney" }
+
+export default {};

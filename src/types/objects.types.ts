@@ -56,3 +56,5 @@ let post: Article = {
   content: "Hello world",
   title: "hello",
 };
+
+export default {};
