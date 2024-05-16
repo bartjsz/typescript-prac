@@ -11,3 +11,5 @@ number = Infinity * 0.01;
 number = parseInt("12");
 
 number = "121";
+
+export default {};

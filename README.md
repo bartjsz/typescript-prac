@@ -1,4 +1,5 @@
-https://www.udemy.com/course/typescript-course/learn/lecture/33550794#overview
+<!-- https://www.udemy.com/course/typescript-course/learn/lecture/33550794#overview
+https://github.com/manikbajaj/typescript-with-parcel/tree/master -->
 
 npm install typescript -g
 
