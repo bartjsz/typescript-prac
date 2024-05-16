@@ -37,5 +37,3 @@ official docs parcel modules
 https://parceljs.org/languages/javascript/ -->
 
 <!-- npm install parcel-bundler instead of parcel package -->
-
-dsds
