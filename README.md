@@ -28,3 +28,12 @@ tsc -p ./tsconfig.json
 the main prop and value in package.json may cause issue in parcel delete it.
 
 <!-- cannot redeclare block scoped variables  -->
+
+<!-- modules -->
+
+<!-- https://stackoverflow.com/questions/71696140/parcel-js-says-to-add-the-type-module-attribute-to-the-script-tag-but-ive-a
+
+official docs parcel modules
+https://parceljs.org/languages/javascript/ -->
+
+<!-- npm install parcel-bundler instead of parcel package -->

@@ -1,17 +1,34 @@
+import * as roles from "./roles";
 console.log("start");
-// void and never types
-// https://www.udemy.com/course/typescript-course/learn/lecture/31770992#overview
 
-const addnumbers = (): void => {
-  console.log(2 + 4);
+// Enums
+// https://www.udemy.com/course/typescript-course/learn/lecture/31771000#overview
+
+//
+// this is not declaritive. Better to use enums
+// const roles = ["admin", "author", "editor"];
+// roles[1];
+
+enum Roles {
+  admin = "admim",
+  author = "author",
+  editor = "editor",
+}
+
+type Person = {
+  name: string;
+  email: string;
+  password: string;
+  role: Roles;
 };
 
-addnumbers();
+console.log(Roles.author);
 
-const throwNewError = (): never => {
-  throw new Error("your program terminated because of error");
+const person: Person = {
+  name: "john",
+  email: "john@email.com",
+  password: "password",
+  role: Roles.editor,
 };
 
-// void will not cause crash but the never type can cause fatal run time error eg uncaught exception error.
-// Understanding and Fixing fatal error uncaught error in javascript article
-// https://www.bugpilot.com/guides/en/javascript-error-fatal-error-uncaught-error-608a
+console.log("person", person);
