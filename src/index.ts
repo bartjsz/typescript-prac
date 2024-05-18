@@ -1,34 +1,12 @@
-import * as roles from "./roles";
+// functions in typescript
 console.log("start");
 
-// Enums
-// https://www.udemy.com/course/typescript-course/learn/lecture/31771000#overview
-
-//
-// this is not declaritive. Better to use enums
-// const roles = ["admin", "author", "editor"];
-// roles[1];
-
-enum Roles {
-  admin = "admim",
-  author = "author",
-  editor = "editor",
+// function declaration
+function intro(name: string, age: number, country?: string): string {
+  if (country) {
+    return `my name is ${name} and age is ${age} and I live in ${country}`;
+  }
+  return `my name is ${name} and age is ${age}`;
 }
 
-type Person = {
-  name: string;
-  email: string;
-  password: string;
-  role: Roles;
-};
-
-console.log(Roles.author);
-
-const person: Person = {
-  name: "john",
-  email: "john@email.com",
-  password: "password",
-  role: Roles.editor,
-};
-
-console.log("person", person);
+console.log(intro("john", 32));
